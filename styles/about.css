@@ -1,0 +1,25 @@
+@font-face{
+    font-family: "caviar";
+    src: url("/font/CaviarDreams.ttf");
+    }
+
+@font-face{
+    font-family: "bebas";
+    src: url("/font/BebasKai.ttf");
+    }
+
+.title
+{
+    font-family: caviar;
+    text-align: center;
+    font-size: 300%;
+}
+
+.paragraphe
+{
+    font-family: caviar;
+    font-size: 200%;
+    text-align: justify;
+    width: 85%;
+    margin: auto;
+}

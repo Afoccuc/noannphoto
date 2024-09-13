@@ -1,0 +1,180 @@
+@font-face{
+    font-family: "caviar";
+    src: url("/font/CaviarDreams.ttf");
+    }
+
+@font-face{
+    font-family: "bebas";
+    src: url("/font/BebasKai.ttf");
+    }
+
+body
+{
+    margin: 0;
+}
+
+.name
+{
+    justify-self: flex-start;
+    text-align: left;
+    display: inline-block;
+    margin-left: 75px;
+}
+
+
+
+.head
+{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+
+    justify-content: space-between;
+    display: flex;
+    font-family: caviar;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.links
+{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.button
+{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.abtn
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.button:hover
+{
+
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.mainImg
+{
+    background-image: url("/imagesUtils/1697198605310.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title
+{
+    color: aliceblue;
+    font-family: bebas;
+    font-size: 500%;
+}
+
+.discover
+{
+    width: 300px;
+    height: 75px;
+    background-color: #6df76d;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5s;
+    font-family: caviar;
+    text-decoration: none;
+    color: aliceblue;
+    border: none;
+}
+
+
+
+.discover:hover
+{
+    background-color: aliceblue;
+    color: #6df76d;
+    cursor: pointer;
+}
+
+.categories
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #cecece;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.categories a
+{
+    text-decoration: none;
+}
+
+.categorie1
+{
+    background-image: url("/pictures/sky.jpg");
+    width: 30%;
+    height: 30%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.categorie2
+{
+    background-image: url("/pictures/_MG_2106.JPG");
+    width: 30%;
+    height: 30%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.categorie1:hover
+{
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+.categorie2:hover
+{
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.sub
+{
+    font-family: caviar;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10%;
+    text-decoration: none;
+}
+
+
+.footer
+{
+    width: 100%;
+    height: 150px;
+    background-color: #2c2c2c;
+}
