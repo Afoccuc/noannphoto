@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arborescence des fichiers du site</title>
+</head>
+<body>
+    <h1>Arborescence des fichiers</h1>
+    <div id="fileTree"></div>
+
+    <script>
+        // Fonction récursive pour créer l'arborescence HTML
+        function createTreeHtml(tree, container, path = '') {
+            const ul = document.createElement('ul');
+
+            for (const key in tree) {
+                const li = document.createElement('li');
+
+                if (typeof tree[key] === 'object') {
+                    li.textContent = key;
+                    createTreeHtml(tree[key], li, `${path}${key}/`);
+                } else {
+                    const link = document.createElement('a');
+                    link.textContent = tree[key];
+                    link.id = "link";
+                    link.href = `${path}${tree[key]}`;
+                    link.target = '_self'; // Ouvre dans le même onglet
+                    li.appendChild(link);
+                }
+
+                ul.appendChild(li);
+            }
+
+            container.appendChild(ul);
+        }
+
+        // Requête pour récupérer l'arborescence des fichiers
+        fetch('list_files.php')
+            .then(response => response.json())
+            .then(tree => {
+                const fileTreeContainer = document.getElementById('fileTree');
+                createTreeHtml(tree, fileTreeContainer);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des fichiers :', error);
+            });
+    </script>
+</body>
+</html>
+
+<style>
+    #link
+    {
+        font-style: normal;
+        color: blue;
+    }
+</style>

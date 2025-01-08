@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="/portfolio.css">
     <script src="/js/addpictures.js"></script>
+    <script src="/js/infoOpen.js"></script>
 </head>
 <body>
     <h1 class="title">Portfolio</h1>
-    <div class="show" id="show"></div>
-    <!-- <div class="show">
-        <img src="/pictures/1697198605310.jpg" alt="" class="showPicture">
-    </div> -->
+    <div class="show" id="show">
+        <div class="infoPannel">
+            <div class="info" id="info">
+                <h1 class="imgTitle" id="imgTitle"></h1>
+                <button id="close-btn" type="button">Fermer</button>
+                <h3 class="description" id="speed">Vitesse : </h3>
+                <h3 class="description" id="iso">ISO : </h3>
+                <h3 class="description" id="aperture">Ouverture : </h3>
+                <h3 class="description" id="camera">Appareil photo : </h3>
+                <h3 class="description" id="description">description</h3>
+            </div>
+            <button id="open-btn" style="display: none;">Réouvrir</button>
+        </div>
+        
+    </div>
+    
     <div class="pictures" id="pictures"></div>
 </body>
 </html>

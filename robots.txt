@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: test.php
+Disallow: get_images.php
+Disallow: link.php
+Disallow: list_files.php
+Disallow: list.html
